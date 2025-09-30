@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nate's Portfolio</title>
+    <title>Hacker's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,16 +140,16 @@
                             I thrive on challenges and enjoy dissecting complex problems, whether it's securing a network, developing a new tool, or automating a tedious task. This portfolio is a showcase of my skills and the projects I've poured my passion into.
                         </p>
                          <div class="mt-6 flex space-x-4">
-                            <a href="https://github.com/viznate" target="_blank" class="icon text-2xl"><i class="fab fa-github"></i></a>
-                            <a href="https://linkedin.com/in/nathaniel-salazar86" target="_blank" class="icon text-2xl"><i class="fab fa-linkedin"></i></a>
-                            <a href="mailto:nathanielsal86@gmail.com" class="icon text-2xl"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/your-username" target="_blank" class="icon text-2xl"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/your-username" target="_blank" class="icon text-2xl"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:your.email@example.com" class="icon text-2xl"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Projects Section -->
-             <section id="projects">
+            <section id="projects">
                 <h2 class="section-title text-2xl font-bold mb-4 inline-block">ls -l projects/</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Project 1 -->
@@ -166,10 +166,6 @@
                     </div>
                 </div>
             </section>
-                    <!-- Project 2 -->
-                   
-                    <!-- Project 3 -->
-                   
 
             <!-- Resume Section -->
             <section id="resume">
@@ -185,7 +181,8 @@
                                 <li>Assimilated new team members through comprehensive onboarding programs, enabling them to quickly integrate into the department and contribute effectively.</li>
                                 <li>Resolved customer complaints with empathy, resulting in increased loyalty and repeat business.</li>
                             </ul>
-                             <div class="mt-4">
+                        </div>
+                         <div class="mt-4">
                             <h4 class="font-semibold text-[#7aa2f7]">Sales Associate | AT&T</h4>
                             <p class="text-sm text-gray-400">2021 - 2023</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
@@ -203,7 +200,6 @@
                                 <li>Maintained confidential records and logged all communications accurately.</li>
                             </ul>
                         </div>
-                        </div>
                     </div>
                     <div class="mb-6">
                         <h3 class="text-xl font-bold text-[#bb9af7]">Education</h3>
@@ -214,12 +210,11 @@
                                 <li>Specialization in color theory, typography, and logo design.</li>
                             </ul>
                         </div>
-                      
                         <div class="mt-4">
                             <h4 class="font-semibold text-[#7aa2f7]">Bachelor of Science in Computer Science</h4>
                             <p class="text-sm text-gray-400">University of Texas Rio Grande Valley | 2021 - 2025</p>
                              <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Specialization in Linux, Python, and Digital Forensics.</li>
+                                <li>Specialization in Linux, Python, and Digital Forensics, with some Red Hat Skills.</li>
                             </ul>
                         </div>
                     </div>
@@ -232,7 +227,7 @@
                             <span class="tag">Docker</span><span class="tag">Git</span>
                         </div>
                     </div>
-                    <a href="my-resume.pdf" download class="inline-block mt-6 bg-[#7aa2f7] text-[#1a1b26] font-bold px-4 py-2 rounded-lg hover:bg-[#bb9af7] transition-colors">Download Full Resume</a>
+                    <a href="your-resume.pdf" download class="inline-block mt-6 bg-[#7aa2f7] text-[#1a1b26] font-bold px-4 py-2 rounded-lg hover:bg-[#bb9af7] transition-colors">Download Full Resume</a>
                 </div>
             </section>
 
@@ -277,25 +272,25 @@
                 'help': content.querySelector('#help').innerHTML,
                 'all': content.querySelector('#about').innerHTML + content.querySelector('#projects').innerHTML + content.querySelector('#resume').innerHTML,
                 'clear': () => {
-                    outputContainer.innerHTML = '';
+                    location.reload();
                     return '';
                 }
             };
             
             const welcomeMessage = `
-    <div class="output">
+                <div class="output">
 <pre>
  _   _        _       
-| \ | |      | |      
-|  \| | ___  | |_ ___ 
-| . \` |/ _ \\ | __/ _ \\
-| |\  |  __/ | ||  __/
+| \\ | |      | |      
+|  \\| | ___  | |_ ___ 
+| . \` |/   \\ | __/  _ \\
+| |\\  |    / | ||    __/
 |_| \\_|\\___|  \\__\\___|
 </pre>
-        <p>Welcome to my interactive portfolio.</p>
-        <p>Type '<span class="command">help</span>' to see the list of available commands.</p>
-    </div>
-`;
+                    <p>Welcome to my interactive portfolio.</p>
+                    <p>Type '<span class="command">help</span>' to see the list of available commands.</p>
+                </div>
+            `;
             
             outputContainer.innerHTML = welcomeMessage;
 
@@ -333,4 +328,6 @@
     </script>
 </body>
 </html>
+
+
 
