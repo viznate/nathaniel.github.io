@@ -5,7 +5,7 @@ Welcome to my interactive terminal-themed portfolio! This project is a unique wa
 
 
 🚀 Live Demo
-You can view the live version of my portfolio here: https://nathaniel.github.io/
+You can view the live version of my portfolio here: https://viznate.github.io/
 
 
 💡 How to Use
