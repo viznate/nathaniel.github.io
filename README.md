@@ -1,7 +1,8 @@
 Interactive Terminal Portfolio
 Welcome to my interactive terminal-themed portfolio! This project is a unique way to showcase my skills, projects, and resume in a style that reflects my passion for cybersecurity and the Linux command line.
 
-<img width="1470" height="802" alt="image" src="https://github.com/user-attachments/assets/fbf5bc4f-63eb-47b8-938b-6523f0f92f7f" />
+<img width="1057" height="458" alt="image" src="https://github.com/user-attachments/assets/53815201-5505-4dba-ba56-cb55a1a00696" />
+
 
 
 🚀 Live Demo
