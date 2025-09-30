@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #1a1b26;
+            color: #a9b1d6;
+        }
+        .terminal-header {
+            background-color: #101116;
+            border-bottom: 1px solid #363a4f;
+        }
+        .terminal-window {
+            background-color: #1a1b26;
+            border: 1px solid #363a4f;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .prompt {
+            color: #bb9af7;
+        }
+        .command {
+            color: #7aa2f7;
+        }
+        .output {
+            color: #c0caf5;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: #a9b1d6;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { background-color: transparent }
+            50% { background-color: #a9b1d6; }
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #7aa2f7;
+        }
+        .project-card {
+            background-color: #24283b;
+            border: 1px solid #363a4f;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .tag {
+            background-color: #3b4261;
+            color: #7aa2f7;
+        }
+        .resume-section {
+            background-color: #24283b;
+        }
+        .section-title {
+            color: #bb9af7;
+            border-bottom: 2px solid #7aa2f7;
+        }
+        .icon {
+            color: #7aa2f7;
+            transition: color 0.3s;
+        }
+        .icon:hover {
+            color: #bb9af7;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101116;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b4261;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #565f89;
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Terminal Window -->
+        <div class="terminal-window overflow-hidden">
+
+            <!-- Terminal Header -->
+            <div class="terminal-header flex items-center p-3">
+                <div class="flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="flex-grow text-center text-sm text-gray-400">
+                    <i class="fas fa-terminal mr-2"></i> root@kali:~
+                </div>
+                <div class="w-12"></div>
+            </div>
+
+            <!-- Terminal Body -->
+            <div id="terminal-body" class="p-4 md:p-6 h-auto min-h-[80vh] overflow-y-auto">
+                <div id="output-container"></div>
+                <div class="flex items-center">
+                    <span class="prompt">root@kali</span><span class="text-gray-500">:</span><span class="command">~</span><span class="text-gray-500">$</span>
+                    <input type="text" id="command-input" class="bg-transparent border-none text-white w-full focus:outline-none ml-2" autocomplete="off" autofocus>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden Sections for Content -->
+        <div id="content" class="hidden">
+            <!-- About Section -->
+            <section id="about">
+                <h2 class="section-title text-2xl font-bold mb-4 inline-block">./about_me.sh</h2>
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="https://placehold.co/150x150/24283b/a9b1d6?text=N" alt="Nathaniel" class="rounded-full w-36 h-36 md:w-48 md:h-48 mb-4 md:mb-0 md:mr-8 border-4 border-[#7aa2f7]">
+                    <div>
+                        <p class="text-lg">
+                            Hello there! I'm Nathaniel, a passionate cybersecurity enthusiast and developer with a deep love for the Linux ecosystem, especially Kali. My journey into tech started with a curiosity for how things work, which naturally led me down the rabbit hole of ethical hacking and open-source software.
+                        </p>
+                        <p class="mt-4 text-lg">
+                            I thrive on challenges and enjoy dissecting complex problems, whether it's securing a network, developing a new tool, or automating a tedious task. This portfolio is a showcase of my skills and the projects I've poured my passion into.
+                        </p>
+                         <div class="mt-6 flex space-x-4">
+                            <a href="https://github.com/your-username" target="_blank" class="icon text-2xl"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/your-username" target="_blank" class="icon text-2xl"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:your.email@example.com" class="icon text-2xl"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2 class="section-title text-2xl font-bold mb-4 inline-block">ls -l projects/</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="project-card rounded-lg p-6">
+                        <h3 class="font-bold text-xl mb-2 text-[#7aa2f7]">Intrusion Detection System</h3>
+                        <p class="text-sm mb-4">A Python-based tool to scan a local network for active devices and open ports. Built with Scapy and multiprocessing for efficiency.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full">Scapy</span>
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full">Networking</span>
+                        </div>
+                        <a href="#" class="inline-block mt-4 text-[#bb9af7] hover:underline">View on GitHub <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Project 2 -->
+                   
+                    <!-- Project 3 -->
+                   
+
+            <!-- Resume Section -->
+            <section id="resume">
+                <h2 class="section-title text-2xl font-bold mb-4 inline-block">cat resume.txt</h2>
+                <div class="resume-section p-6 rounded-lg border border-[#363a4f]">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-[#bb9af7]">Work Experience</h3>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-[#7aa2f7]">Care Team Representative | Sedgwick</h4>
+                            <p class="text-sm text-gray-400">December 2024 - Present</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Collaborated with cross-functional teams to optimize workflows, resulting in streamlined processes and improved efficiency..</li>
+                                <li>Assimilated new team members through comprehensive onboarding programs, enabling them to quickly integrate into the department and contribute effectively.</li>
+                                <li>Resolved customer complaints with empathy, resulting in increased loyalty and repeat business.
+
+.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-[#bb9af7]">Education</h3>
+                       <div class="mt-4">
+                            <h4 class="font-semibold text-[#7aa2f7]">Bachelor of Science in Graphic Design</h4>
+                            <p class="text-sm text-gray-400">University of Arts | 2017 - 2021</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Specialization in color theory, typography, and logo design.</li>
+                            </ul>
+                        </div>
+                      
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-[#7aa2f7]">Bachelor of Science in Computer Science</h4>
+                            <p class="text-sm text-gray-400">University of Texas Rio Grande Valley | 2021 - 2025</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#bb9af7]">Skills</h3>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="tag">Kali Linux</span><span class="tag">Python</span>
+                            <span class="tag">Bash Scripting</span><span class="tag">Metasploit</span>
+                            <span class="tag">Wireshark</span><span class="tag">Nmap</span>
+                            <span class="tag">Docker</span><span class="tag">Git</span>
+                        </div>
+                    </div>
+                    <a href="your-resume.pdf" download class="inline-block mt-6 bg-[#7aa2f7] text-[#1a1b26] font-bold px-4 py-2 rounded-lg hover:bg-[#bb9af7] transition-colors">Download Full Resume</a>
+                </div>
+            </section>
+
+             <!-- Help Section -->
+             <section id="help">
+                <h2 class="section-title text-2xl font-bold mb-4 inline-block">man portfolio</h2>
+                <div class="output">
+                    <p class="font-bold text-[#bb9af7]">PORTFOLIO(1)               User Commands               PORTFOLIO(1)</p>
+                    <br>
+                    <p><span class="font-bold">NAME</span></p>
+                    <p class="ml-4">portfolio - interactive portfolio website</p>
+                    <br>
+                    <p><span class="font-bold">SYNOPSIS</span></p>
+                    <p class="ml-4"><span class="font-bold">command</span> [ARGUMENT]</p>
+                    <br>
+                    <p><span class="font-bold">DESCRIPTION</span></p>
+                    <p class="ml-4">Navigate the portfolio using the following commands:</p>
+                    <ul class="list-disc list-inside ml-8 space-y-1">
+                        <li><span class="command">about</span>   - Show information about me.</li>
+                        <li><span class="command">projects</span>- List my coding projects.</li>
+                        <li><span class="command">resume</span>  - Display my professional resume.</li>
+                        <li><span class="command">help</span>    - Show this help message.</li>
+                        <li><span class="command">clear</span>   - Clear the terminal screen.</li>
+                        <li><span class="command">all</span>     - Display all sections.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const commandInput = document.getElementById('command-input');
+            const outputContainer = document.getElementById('output-container');
+            const terminalBody = document.getElementById('terminal-body');
+            const content = document.getElementById('content');
+
+            const commands = {
+                'about': content.querySelector('#about').innerHTML,
+                'projects': content.querySelector('#projects').innerHTML,
+                'resume': content.querySelector('#resume').innerHTML,
+                'help': content.querySelector('#help').innerHTML,
+                'all': content.querySelector('#about').innerHTML + content.querySelector('#projects').innerHTML + content.querySelector('#resume').innerHTML,
+                'clear': () => {
+                    outputContainer.innerHTML = '';
+                    return '';
+                }
+            };
+            
+            const welcomeMessage = `
+                <div class="output">
+                    <pre>
+██   ██ ██    ██  ██████  ██       ██ ██   ██ ██ ███████ ██
+██  ██  ██    ██ ██    ██ ██       ██ ██  ██  ██ ██      ██
+█████   ██    ██ ██    ██ ██       ██ █████   ██ ███████ ██
+██  ██  ██    ██ ██    ██ ██       ██ ██  ██  ██      ██
+██   ██  ██████   ██████  ███████  ██ ██   ██ ██ ███████ ██
+                    </pre>
+                    <p>Welcome to my interactive portfolio.</p>
+                    <p>Type '<span class="command">help</span>' to see the list of available commands.</p>
+                </div>
+            `;
+            
+            outputContainer.innerHTML = welcomeMessage;
+
+            commandInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const command = commandInput.value.trim().toLowerCase();
+                    commandInput.value = '';
+
+                    const output = document.createElement('div');
+                    output.innerHTML = `<div class="flex"><span class="prompt">root@kali</span><span class="text-gray-500">:</span><span class="command">~</span><span class="text-gray-500">$</span> <span class="ml-2">${command}</span></div>`;
+                    
+                    if (command in commands) {
+                        const result = commands[command];
+                        if (typeof result === 'function') {
+                            result();
+                        } else {
+                           output.innerHTML += `<div class="output mt-2">${result}</div>`;
+                        }
+                    } else if (command === '') {
+                        // do nothing
+                    } else {
+                        output.innerHTML += `<div class="output mt-2">bash: command not found: ${command}. Type 'help'.</div>`;
+                    }
+                    
+                    outputContainer.appendChild(output);
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                }
+            });
+
+            // Focus on input when clicking anywhere in the terminal
+            terminalBody.addEventListener('click', () => {
+                commandInput.focus();
+            });
+        });
+    </script>
+</body>
+</html>
+
