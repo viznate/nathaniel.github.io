@@ -5,9 +5,8 @@ Welcome to my interactive terminal-themed portfolio! This project is a unique wa
 
 
 🚀 Live Demo
-You can view the live version of my portfolio here: https://your-username.github.io/
+You can view the live version of my portfolio here: https://nathaniel.github.io/
 
-(Remember to replace your-username with your actual GitHub username!)
 
 💡 How to Use
 The website functions like a basic terminal. To navigate, simply type one of the available commands and press Enter.
